@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TradeApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-logo">
+        <%= link_to("/") do %>
+          <img src="/nogizaka_logo.png">
+        <% end %>
+      </div>
+      <div class="header-main">
+        <h1><%= link_to("Trading App", "/") %></h1>
+      </div>
+      <hr size="10" color="#7e1083">
+    </header>
+    <%= yield %>
+    <footer>
+    </footer>
+  </body>
+</html>
