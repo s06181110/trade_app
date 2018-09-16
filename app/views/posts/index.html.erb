@@ -1,18 +1,10 @@
+<div class="layout">
+	<h1 class="page-title">投稿一覧</h1>
 
-<h1 class="page-title">投稿一覧</h1>
-
-<% @posts.each do |post| %>
-	<div class="post-content">
-		<%= post.member %>
-    <% if post.yori %>
-			ヨリ
-		<% end %>
-		<% if post.tyu %>
-			チュウ
-		<% end %>
-		<% if post.hiki %>
-			ヒキ
-		<% end %>
-	</div>
-<% end %>
- 
+	<% @posts.each do |post| %>
+		<div class="post-content">
+			<%= simple_format(post.content) %>
+			<%= simple_format(post.comment) %>
+		</div>
+	<% end %>
+</div>

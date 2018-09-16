@@ -1,3 +1,76 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// new (投稿フォーム) =======================================
+
+@font-face{font-family:"IonIcons";src:url("//code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.1");src:url("//code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"),url("//code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.ttf?v=2.0.1") format("truetype"),url("//code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.woff?v=2.0.1") format("woff"),url("//code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.svg?v=2.0.1#Ionicons") format("svg");font-weight:normal;font-style:normal}
+
+.pulldown{
+	padding-top: 10px;
+}
+
+.menu{
+	float: left;
+	margin-left: 20%;
+	color: #333;
+}
+
+
+.pt20{
+  padding-top: 20px;
+}
+
+.label-checkbox input[type="checkbox"]{
+  display: none;
+}
+.label-checkbox{
+  cursor: pointer;
+  color: #333;
+  padding-right: 15px;
+  font-weight: normal;
+}
+.label-checkbox .lever:before{
+  content:"\f372";
+  font-family: "IonIcons";
+  margin-right: 7px;
+  color: #333;
+  font-size: 18px;
+  position: relative;
+  top: 2px;
+}
+
+.label-checkbox input[type="checkbox"]:checked + .lever:before{
+  content:"\f373";
+  font-family: "IonIcons";
+}
+
+.content{
+	margin-top: 30px;
+}
+
+.content p{
+	margin: 0;
+}
+
+.content textarea {
+	width: 240px;
+	margin-right: 60px;
+  outline: none;
+  border: 1px solid #aaa;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.content textarea:focus {
+	height: 200px;
+  box-shadow: 0 0 7px #1abc9c;
+  border: 1px solid #1abc9c;
+}
+
+// index (投稿一覧) ========================================
+
+.post-content{
+	max-width: 300px;
+	margin: 20px auto;
+	text-align: center;
+	background-color: #f8e0fa;
+	box-shadow: 0 2px 6px #c1ced7;
+}

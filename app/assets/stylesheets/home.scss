@@ -101,12 +101,23 @@ header{
     transform: translateY(4px);/*下に動く*/
     border-bottom: none;/*線を消す*/
 }
+//====ページ初期設定====================
+.layout{
+	margin: 10% auto;
+	max-width: 600px;
+}
+
+.page-title{
+	// padding-top: 50px;
+	padding-bottom: 5%;
+}
 
 //=====フォーム==================
 
+
+
 .form {
 	text-align: center;
-	max-width: 600px;
 	margin: 0 auto;
 	background-color: #e2c3e4;
 	box-shadow: 0 2px 6px #c1ced7;

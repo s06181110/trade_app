@@ -1,25 +1,82 @@
-
-<h1 class="page-title">投稿ページ</h1> 
-
-<%= form_tag("/posts/create") do%>
-<div class="form">
-	<form method="post" action="example.cgi">
-		<p>メンバー :
-		<select name="member">
-			<option value="">▼選んでください</option>
-			<option value="西野 七瀬">西野 七瀬</option>
-			<option value="白石 麻衣">白石 麻衣</option>
-			<option value="齋藤 飛鳥">齋藤 飛鳥</option>
-		</select>
+<div class="layout">
+	<h1 class="page-title">投稿ページ</h1> 
+	<%= form_tag("/posts/create") do%>
+	<div class="form">
+		<div class="pulldown">
+		<p><span class="menu">メンバー :</span>
+			<%# コピペ用  multiple size=5 %>
+			<select name="members[]"> <!-- select に multiple と書くと複数選択可-->
+				<option value="noselect">▼選んでください</option>
+				<option value="生田 絵梨花">生田 絵梨花</option>
+				<option value="伊藤 かりん">伊藤 かりん</option>
+				<option value="伊藤 純奈">伊藤 純奈</option>
+				<option value="井上 小百合">井上 小百合</option>
+				<option value="衛藤 美彩">衛藤 美彩</option>
+				<option value="川後 陽菜">川後 陽菜</option>
+				<option value="北野 日奈子">北野 日奈子</option>
+				<option value="齋藤 飛鳥">齋藤 飛鳥</option>
+				<option value="斉藤 優里">斉藤 優里</option>
+				<option value="桜井 玲香">桜井 玲香</option>
+				<option value="佐々木 琴子">佐々木 琴子</option>
+				<option value="白石 麻衣">白石 麻衣</option>
+				<option value="新内 眞衣">新内 眞衣</option>
+				<option value="鈴木 絢音">鈴木 絢音</option>
+				<option value="高山 一実">高山 一実</option>
+				<option value="寺田 蘭世">寺田 蘭世</option>
+				<option value="中田 花奈">中田 花奈</option>
+				<option value="西野 七瀬">西野 七瀬</option>
+				<option value="能條 愛未">能條 愛未</option>
+				<option value="樋口 日奈">樋口 日奈</option>
+				<option value="星野 みなみ">星野 みなみ</option>
+				<option value="堀 未央奈">堀 未央奈</option>
+				<option value="松村 沙友理">松村 沙友理</option>
+				<option value="山崎 怜奈">山崎 怜奈</option>
+				<option value="若月 佑美">若月 佑美</option>
+				<option value="渡辺 みり愛">渡辺 みり愛</option>
+				<option value="和田 まあや">和田 まあや</option>
+				<option value="伊藤 理々杏">伊藤 理々杏</option>
+				<option value="岩本 蓮加">岩本 蓮加</option>
+				<option value="梅澤 美波">梅澤 美波</option>
+				<option value="大園 桃子">大園 桃子</option>
+				<option value="久保 史緒里">久保 史緒里</option>
+				<option value="阪口 珠美">阪口 珠美</option>
+				<option value="佐藤 楓">佐藤 楓</option>
+				<option value="中村 麗乃">中村 麗乃</option>
+				<option value="向井 葉月">向井 葉月</option>
+				<option value="山下 美月">山下 美月</option>
+				<option value="吉田 綾乃クリスティー">吉田 綾乃クリスティー</option>
+				<option value="与田 祐希">与田 祐希</option>
+			</select>
 		</p>
-		<p>ポーズ :
-			<input type="checkbox" name="yori" value="true"> ヨリ
-			<input type="checkbox" name="tyu" value="true"> チュウ
-			<input type="checkbox" name="hiki" value="true"> ヒキ
-		</p>
+		</div>
+		
+		<div class="container pt20">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3">
+				<div class="form-group text-center">
+					<span class="menu">ポーズ :</span>
+					<label class="label-checkbox form-inline">
+						<input type="checkbox" name="yori" value=" ヨリ"/>
+						<span class="lever">ヨリ</span>
+					</label>
+					<label class="label-checkbox form-inline">
+						<input type="checkbox" name="tyu" value=" チュウ"/>
+						<span class="lever">チュウ</span>
+					</label>
+					<label class="label-checkbox form-inline">
+						<input type="checkbox" name="hiki" value=" ヒキ"/>
+						<span class="lever">ヒキ</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<span class="menu">コメント（任意）:</span>
+			<textarea name="comment"  placeholder="例) 〇〇にいます"></textarea>
+		</div>
 		<div class="submit-button">
 			<p><input class="button" type="submit" value="投稿"></p>
 		</div>
-	</form>
+	</div>
+	<% end %>
 </div>
-<% end %>
