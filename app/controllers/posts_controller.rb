@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def new 
     @post = Post.new
   end
-
+=begin 
   def create
     @post = Post.new
     @post.member = params[:member]
@@ -29,5 +29,5 @@ class PostsController < ApplicationController
 
   end
 
-
+ =end
 end
