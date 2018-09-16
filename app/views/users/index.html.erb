@@ -1,0 +1,11 @@
+
+<h1 class="page-title">ユーザー一覧</h1>
+
+<% @users.each do |user| %>
+	<div class="user-name">
+		ユーザー名:<%= user.name %>
+	</div>
+	<div class="user-email">
+		メールアドレス:<%= user.email %>
+	</div>
+<% end %>

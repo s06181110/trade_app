@@ -18,6 +18,7 @@ a{text-decoration: none;}
 header{
     height: 80px;
     line-height: 80px;
+    margin-bottom: 30px;
 }
 
 .header-logo{
@@ -88,9 +89,9 @@ header{
     display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none;
-    background: #668ad8;/*ボタン色*/
+    background: #e2437a;/*ボタン色*/
     color: #FFF;
-    border-bottom: solid 4px #627295;
+    border-bottom: solid 4px #af335e;
     border-radius: 3px;
 }
 
@@ -99,4 +100,38 @@ header{
     -webkit-transform: translateY(4px);
     transform: translateY(4px);/*下に動く*/
     border-bottom: none;/*線を消す*/
+}
+
+//=====フォーム==================
+
+.form {
+	text-align: center;
+	max-width: 600px;
+	margin: 0 auto;
+	background-color: #e2c3e4;
+	box-shadow: 0 2px 6px #c1ced7;
+}
+
+.form input{
+  width: 60%;
+  border: 1px solid #d8dadf;
+	padding: 10px;
+  color: #57575f;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 2px;
+}
+
+.form input[type="submit"] {
+  background-color: #e2437a;
+  color: white;
+  cursor: pointer;
+  font-weight: 300;
+  width: 120px;
+  border-radius: 2px;
+  margin: 8px 0px;
+}
+
+.form-error {
+  color: #ff4d75;
 }

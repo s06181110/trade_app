@@ -1,0 +1,19 @@
+
+
+<h1 class="page-title">ログイン</h1> 
+	
+<div class="signup-main">
+		<div class="form-error">
+		</div>
+	<%= form_tag("/users/create") do%>
+	<div class="form">
+		<p>メールアドレス</p>
+		<input name="email" >
+		<p>パスワード</p>
+		<input type="password" name="password">
+		<div class="submit-button">
+		<input type="submit" value="ログイン" >
+		</div>
+	<% end %>
+	</div>
+</div>
