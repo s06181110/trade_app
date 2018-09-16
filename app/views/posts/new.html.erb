@@ -1,0 +1,25 @@
+
+<h1 class="page-title">投稿ページ</h1> 
+
+<%= form_tag("/posts/create") do%>
+<div class="form">
+	<form method="post" action="example.cgi">
+		<p>メンバー :
+		<select name="member">
+			<option value="">▼選んでください</option>
+			<option value="西野 七瀬">西野 七瀬</option>
+			<option value="白石 麻衣">白石 麻衣</option>
+			<option value="齋藤 飛鳥">齋藤 飛鳥</option>
+		</select>
+		</p>
+		<p>ポーズ :
+			<input type="checkbox" name="yori" value="true"> ヨリ
+			<input type="checkbox" name="tyu" value="true"> チュウ
+			<input type="checkbox" name="hiki" value="true"> ヒキ
+		</p>
+		<div class="submit-button">
+			<p><input class="button" type="submit" value="投稿"></p>
+		</div>
+	</form>
+</div>
+<% end %>

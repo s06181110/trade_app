@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_15_172809) do
+ActiveRecord::Schema.define(version: 2018_09_16_075918) do
+
+  create_table "posts", force: :cascade do |t|
+    t.string "member"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "yori", default: false, null: false
+    t.boolean "tyu", default: false, null: false
+    t.boolean "hiki", default: false, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"

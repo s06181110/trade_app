@@ -36,9 +36,20 @@ class UsersController < ApplicationController
   #ユーザー情報削除処理
   def destroy
   end
+
+  def login_form
+  end
  
   #ユーザーログイン画面
   def login
+    @user = User.find_by(email: params[:email], password: params[:password])
+    if @user
+      redirect_to("/posts/new")
+    else
+      @email = params[:email]
+      @password = params[:password]
+      render("users/login_form")
+    end
   end
  
   #ユーザーログアウト処理

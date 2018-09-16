@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  get 'posts/index'
+  get "posts/index" => "posts#index"
+  get "posts/new" => "posts#new"
+  post "posts/create" => "posts#create"
+  get "posts/index" => "posts#index"
+
+
   get "users/sign_up" => "users#sign_up"#登録
   post "users/create" => "users#create" #登録処理
   get "users/index" => "users#index" #一覧表示
@@ -7,7 +12,8 @@ Rails.application.routes.draw do
   get "users/:id/edit" => "users#edit" #編集
   post "users/:id/update" => "users#update" #更新処理
   post "users/:id/destroy" => "users#destroy" #削除処理
-  get "login" => "users#login" #ログイン
+  get "login" => "users#login_form" #ログイン
+  post "login" => "users#login"
   post "users/:id/logout" => "users#logout" #ログアウト
 
   
