@@ -60,6 +60,8 @@ class UsersController < ApplicationController
  
   #ユーザーログアウト処理
   def logout
+    session[:user_id] = nil
+    redirect_to("/")
   end
 
 end

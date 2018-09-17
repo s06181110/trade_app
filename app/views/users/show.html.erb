@@ -3,5 +3,9 @@
   <div class="user-content">
 		<h2><%= @user.name %></h2>
 		<p><a href="https://twitter.com/<%=@user.twitter_id%>" target="_blank">@<%= @user.twitter_id %></a></p>
+		<% if @user.id == @current_user.id %>
+			<p><%= link_to("編集", "/edit", {method: :post}) %></p>
+			<p><%= link_to("ログアウト", "/logout", {method: :post}) %></p>
+		<%end%>
 	</div>
 </div>

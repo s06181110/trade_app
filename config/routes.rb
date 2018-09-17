@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   post "users/:id/destroy" => "users#destroy" #削除処理
   get "login" => "users#login_form" #ログイン
   post "login" => "users#login" #ログイン処理
-  post "users/:id/logout" => "users#logout" #ログアウト
+  post "logout" => "users#logout" #ログアウト
 
   
   get "/" => "home#top"
