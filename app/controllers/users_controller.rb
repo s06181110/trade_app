@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :forbid_login_user, {only: [:new, :create, :login_form, :login]}
+
   #ユーザー登録画面
   def sign_up
     @user = User.new
@@ -9,8 +11,10 @@ class UsersController < ApplicationController
     @user.name = params[:name]
     @user.password = params[:password]
     @user.email = params[:email]
+    @user.twitter_id = params[:twitter]
     if @user.save
-      redirect_to("/users/index")
+      session[:user_id] = @user.id
+      redirect_to("/users/#{@user.id}")
     else
       render("users/sign_up")
     end
@@ -23,6 +27,7 @@ class UsersController < ApplicationController
  
   #ユーザー情報詳細表示
   def show
+    @user = User.find_by(id: params[:id])
   end
  
   #ユーザー情報編集画面
@@ -44,6 +49,7 @@ class UsersController < ApplicationController
   def login
     @user = User.find_by(email: params[:email], password: params[:password])
     if @user
+      session[:user_id] = @user.id
       redirect_to("/posts/new")
     else
       @email = params[:email]

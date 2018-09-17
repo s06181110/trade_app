@@ -67,6 +67,15 @@
 
 // index (投稿一覧) ========================================
 
+.post-user-name{
+	padding-right: 80%;
+}
+
+.post-user-name a{
+	color: #333;
+}
+
+
 .post-content{
 	max-width: 300px;
 	margin: 20px auto;

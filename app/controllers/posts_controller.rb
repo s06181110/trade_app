@@ -30,6 +30,7 @@ class PostsController < ApplicationController
       if params[:comment]
         @post.comment = params[:comment]
       end
+      @post.user_id = @current_user.id
       @post.save
       redirect_to("/posts/index")
     else

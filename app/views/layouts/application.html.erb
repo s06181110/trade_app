@@ -21,8 +21,15 @@
       </div>
       <hr size="10" color="#7e1083">
     </header>
+    <% if flash[:notice] %>
+      <div class="flash" id='moment'>
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
     <%= yield %>
     <footer>
+      <div class="footer-main">
+      </div>
     </footer>
   </body>
 </html>
