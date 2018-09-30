@@ -32,14 +32,22 @@
         </div>
       <% end %>
     </header>
+
     <% if flash[:notice] %>
       <div class="flash" id='moment'>
         <%= flash[:notice] %>
       </div>
     <% end %>
+
     <%= yield %>
+
     <footer>
       <div class="footer-main">
+        <ul>
+          <li><%= link_to("データ追加", "/developer/addition")%></li>
+          <li><%= link_to("メンバー一覧", "/developer/idol_show")%></li>
+          <li><%= link_to("ユーザ一覧", "/users/index")%></li>
+        </ul>
       </div>
     </footer>
   </body>

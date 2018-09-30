@@ -227,3 +227,22 @@ header{
 			visibility:hidden;
 	}
 }
+
+//==フッター=================
+
+.footer-main {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
+.footer-main li{
+    color: #333;
+    list-style: none;
+    text-decoration: none;
+}
+
+.footer-main a{
+    color: #333;
+}

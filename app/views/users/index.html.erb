@@ -1,12 +1,23 @@
 
-<h1 class="page-title">ユーザー一覧</h1>
-
-<% @users.each do |user| %>
-	<div class="user-name">
-		ユーザー名:<%= user.name %>
+<div class="layout">
+	<h1 class="page-title">ユーザー一覧</h1>
+	<div class="table">
+		<table border="1">
+		<thead>
+			<tr>
+				<th>名前</th>
+				<th>メールアドレス</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @users.each do |user| %>
+				<tr>
+					<th><%= user.name %></th>
+					<th><%= user.email %></th>
+				</tr>
+			<% end %>
+		</tbody>
+		</table>
 	</div>
-	<div class="user-email">
-		メールアドレス:<%= user.email %>
-	</div>
-<% end %>
+</div>
  

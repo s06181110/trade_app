@@ -19,5 +19,9 @@ Rails.application.routes.draw do
   
   get "/" => "home#top"
 
+  get "developer/addition" => "developer#addition"
+  post "developer/create_idol" => "developer#create_idol"
+  get "developer/idol_show" => "developer#idol_show"
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
