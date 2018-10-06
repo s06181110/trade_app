@@ -1,19 +1,19 @@
 
 <div class="layout">
 	<h1 class="page-title">ユーザー一覧</h1>
-	<div class="table">
+	<div class="table-main">
 		<table border="1">
 		<thead>
 			<tr>
 				<th>名前</th>
-				<th>メールアドレス</th>
+				<th>メアド</th>
 			</tr>
 		</thead>
 		<tbody>
 			<% @users.each do |user| %>
 				<tr>
-					<th><%= user.name %></th>
-					<th><%= user.email %></th>
+					<td><%= user.name %></td>
+					<td><%= user.email %></td>
 				</tr>
 			<% end %>
 		</tbody>

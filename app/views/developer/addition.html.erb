@@ -1,11 +1,49 @@
 
 <div class="layout">
 	<h1 class="page-title">開発者ページ</h1> 
-	<%= form_tag("/developer/create_idol") do%>
 	<div class="develop">
-		メンバー<p><input name="name"></p>
-		id<p><input name="id"></p>
-		<p><input class="button" type="submit" value="投稿"></p>
+		<div class="develop-list">
+			<p>衣装追加</p>
+			<ul>
+				<li>
+					<label for="group_id">Group</label>
+					<select id="group_id" name="group_id"> 
+						<option value="1">乃木坂46</option>
+					</select>
+				</li>
+				<li>
+					<label for="type">衣装</label>
+					<input id="type" type="text" name="type" size="30">
+				</li>
+				<li>
+					<label for="pattern">パターン</label>
+					<select id="pattern" name="pattern"> 
+						<option value="3">3種</option>
+						<option value="4">4種</option>
+						<option value="5">5種</option>
+					</select>
+				</li>
+				<li><input class="button" type="submit" value="追加"></li>
+			</ul>
+		</div>
+
+		<div class="develop-list">
+			<%= form_tag("/developer/create_idol") do%>
+				<p>メンバー追加</p>
+				<ul>
+					<li>
+						<label for="group_id">Group</label>
+						<select id="group_id" name="group_id"> 
+							<option value="1">乃木坂46</option>
+						</select>
+					</li>
+					<li>
+						<label for="name">Member</label>
+						<input id="name" type="text" name="name" size="30">
+					</li>
+					<li><input class="button" type="submit" value="追加"></li>
+				</ul>
+			<% end %>
+		</div>
 	</div>
-	<% end %>
 </div>

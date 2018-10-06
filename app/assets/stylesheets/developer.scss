@@ -5,3 +5,56 @@
 .develop p{
   margin: 0;
 }
+
+.develop-list{
+  background-color: rgb(234, 234, 253);
+  box-shadow: 0 0 3px gray;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.develop-list li{
+  list-style: none;
+}
+
+.develop-list label{
+  margin-right: 10px;
+  width:100px;
+  float: left;
+}
+
+table {
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table-main{
+  margin-bottom: 20px;
+}
+
+.table-main h2{
+  text-align: center;
+}
+
+
+thead, tbody{
+  display: block;
+}
+
+tbody{
+  overflow-y: scroll;
+  height: 150px;
+}
+
+th{
+  background-color: #ccc;
+}
+
+th, td {
+  border: 1px solid #666;
+  padding: 5px;
+  width: 100px;
+}

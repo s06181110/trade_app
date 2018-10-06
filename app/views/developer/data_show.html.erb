@@ -1,0 +1,69 @@
+
+<div class="layout">
+	<h1 class="page-title">データ一覧</h1> 
+	<div class="table-main">
+		<h2>メンバー</h2>
+		<table border="1">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>名前</th>
+				<th>所属</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @idols.each do |idol| %>
+				<% group = Group.find_by(id: idol.group_id)%>
+				<tr>
+					<td><%= idol.id %></td>
+					<td><%= idol.name %></td>
+					<td><%= group.name %></td>
+				</tr>
+			<% end %>
+		</tbody>
+		</table>
+	</div>
+	<div class="table-main">
+		<h2>ポーズ</h2>
+		<table border="1">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>ポーズ</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @poses.each do |pose| %>
+				<tr>
+					<td><%= pose.id %></td>
+					<td><%= pose.name %></td>
+				</tr>
+			<% end %>
+		</tbody>
+		</table>
+	</div>
+	<--
+	photo format 膨大すぎてコメントアウト
+	<div class="table-main">
+		<h2>format</h2>
+		<table border="1">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>メンバー</th>
+				<th>ポーズ</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @formats.each do |photo| %>
+				<tr>
+					<td><%= photo.id %></td>
+					<td><%= Idol.find_by(id: photo.idol_id).name %></td>
+					<td><%= Pose.find_by(id: photo.pose_id).name %></td>
+				</tr>
+			<% end %>
+		</tbody>
+		</table>
+	</div>
+	-->
+</div
