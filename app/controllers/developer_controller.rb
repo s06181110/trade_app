@@ -12,18 +12,32 @@ class DeveloperController < ApplicationController
    
   end
 
-  def create_photo
+  def create_type
     @type = Type.new
-    @type.name = params[:costume]
-    # @type.save
-    # 写真と種類をくっつける処理
+    @type.name = params[:type]
+    @type.group_id = params[:group_id]
+    @type.pattern = params[:pattern]
+    if @type.save
+      # 写真と種類をくっつける処理
+      @type.idol.each do |member|
+        @type.pose.each do |pose|
+          @photo = Photo.new
+          @photo.type_id = @type.id
+          @photo.idol_id = member.id
+          @photo.pose_id = pose.id
+          @photo.save
+        end
+      end
+      redirect_to("/developer/date_show")
+    else
+      render("developer/addtion")
+    end
   end
-
 
   def data_show
     @idols = Idol.all
     @poses = Pose.all
-    @formats = PhotoFormat.all
+    #@photos = Photo.all
   end
 end
 

@@ -42,22 +42,24 @@
 		</tbody>
 		</table>
 	</div>
-	<--
-	photo format 膨大すぎてコメントアウト
+	<!--
+	photo 膨大すぎてコメントアウト
 	<div class="table-main">
 		<h2>format</h2>
 		<table border="1">
 		<thead>
 			<tr>
 				<th>id</th>
+				<th>衣装</th>
 				<th>メンバー</th>
 				<th>ポーズ</th>
 			</tr>
 		</thead>
 		<tbody>
-			<% @formats.each do |photo| %>
+			<% @photos.each do |photo| %>
 				<tr>
 					<td><%= photo.id %></td>
+					<td><%= Type.find_by(id: photo.type_id).name %></td>
 					<td><%= Idol.find_by(id: photo.idol_id).name %></td>
 					<td><%= Pose.find_by(id: photo.pose_id).name %></td>
 				</tr>

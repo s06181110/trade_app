@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
   get "developer/addition" => "developer#addition"
   post "developer/create_idol" => "developer#create_idol"
-  post "developer/create_photo" => "developer#create_photo"
+  post "developer/create_type" => "developer#create_type"
   get "developer/data_show" => "developer#data_show"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

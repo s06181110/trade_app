@@ -3,28 +3,30 @@
 	<h1 class="page-title">開発者ページ</h1> 
 	<div class="develop">
 		<div class="develop-list">
-			<p>衣装追加</p>
-			<ul>
-				<li>
-					<label for="group_id">Group</label>
-					<select id="group_id" name="group_id"> 
-						<option value="1">乃木坂46</option>
-					</select>
-				</li>
-				<li>
-					<label for="type">衣装</label>
-					<input id="type" type="text" name="type" size="30">
-				</li>
-				<li>
-					<label for="pattern">パターン</label>
-					<select id="pattern" name="pattern"> 
-						<option value="3">3種</option>
-						<option value="4">4種</option>
-						<option value="5">5種</option>
-					</select>
-				</li>
-				<li><input class="button" type="submit" value="追加"></li>
-			</ul>
+			<%= form_tag("/developer/create_type") do%>
+				<p>衣装追加</p>
+				<ul>
+					<li>
+						<label for="group_id">Group</label>
+						<select id="group_id" name="group_id"> 
+							<option value="1">乃木坂46</option>
+						</select>
+					</li>
+					<li>
+						<label for="type">衣装</label>
+						<input id="type" type="text" name="type" size="30">
+					</li>
+					<li>
+						<label for="pattern">パターン</label>
+						<select id="pattern" name="pattern"> 
+							<option value="3">3種</option>
+							<option value="4">4種</option>
+							<option value="5">5種</option>
+						</select>
+					</li>
+					<li><input class="button" type="submit" value="追加"></li>
+				</ul>
+			<% end %>
 		</div>
 
 		<div class="develop-list">
